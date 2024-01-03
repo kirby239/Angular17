@@ -1,5 +1,4 @@
-/*** Team Start ***/
-.team .team-item {
+ .team .team-item {
   position: relative;
   border-radius: 10px;
   overflow: hidden;
@@ -7,6 +6,10 @@
 
 .team .team-item .team-text {
   background: var(--bs-primary);
+}
+.imgFondo{
+  background-color: #f8f9fa;
+
 }
 
 .team .team-item .team-social {
@@ -34,7 +37,9 @@
   bottom: 100%;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.3);
+  //background: rgba(0, 0, 0, 0.3);
+  //cambiar color de hover
+  background: rgba(207, 201, 201, 0.233);
   overflow: hidden;
   width: 100%;
   height: 0;
@@ -53,4 +58,4 @@
 .team .team-item:hover .team-text {
   background: var(--bs-secondary);
 }
-/*** Team End ***/
+
