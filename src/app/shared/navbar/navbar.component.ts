@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-//import { classPaint } from '../../util/funcionesModel';
+import { ServicesService } from '../../services/services.service';
 @Component({
   selector: 'app-navbar',
   standalone: true,
@@ -9,10 +9,20 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
   rutaActual: any;
-  constructor() {
+  listarNavbar: any
+  constructor(private service: ServicesService) {
   }
 
   ngOnInit() {
+    let urlListarNavbar = 'navbar/listarNavbar'
+    this.service.getService(urlListarNavbar).subscribe(list => {
+      let aaa: any
+      aaa = list
+      this.listarNavbar = aaa.data
+      console.log(this.listarNavbar);
+
+
+    })
     if (typeof window !== 'undefined') {
       this.rutaActual = window.location.pathname;
     }

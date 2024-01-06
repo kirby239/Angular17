@@ -10,7 +10,11 @@
     </button>
     <div class="collapse navbar-collapse bg-light py-3" id="navbarCollapse">
       <div class="navbar-nav mx-auto border-top">
-        <a href="/home" class="nav-item nav-link active">home</a>
+        @for (nav of listarNavbar; track $index) {
+        <a [href]="nav.href" class="nav-item nav-link active">{{nav.menu}}</a>
+        }
+
+        <!--         <a href="/home" class="nav-item nav-link active">home</a>
 
         <div class="nav-item dropdown">
           <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Aplicacion</a>
@@ -22,7 +26,7 @@
           </div>
         </div>
         <a href="/blog" class="nav-item nav-link active">Blog</a>
-        <a href="/contact" class="nav-item nav-link">Contacto</a>
+        <a href="/contact" class="nav-item nav-link">Contacto</a> -->
       </div>
     </div>
   </nav>
